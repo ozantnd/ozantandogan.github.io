@@ -1,0 +1,118 @@
+/* Reset & base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+  color: #1f2937;
+  background: linear-gradient(145deg, #b089f4, #ee9ad6 35%, #f5b3c1 70%, #b6a3ff);
+  display: grid;
+  place-items: center;
+}
+
+.page {
+  width: min(760px, 92vw);
+  padding: 32px 0 48px;
+}
+
+.card {
+  width: 100%;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  padding: 32px 24px 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.15);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #f3f4f6;
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+}
+
+.name {
+  font-size: clamp(24px, 4vw, 36px);
+  margin: 16px 0 6px;
+  font-weight: 700;
+}
+
+.title {
+  margin: 0;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.links {
+  margin-top: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 14px;
+  padding: 18px 18px 18px 18px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  border: 1px solid rgba(255,255,255,.6);
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  transition: transform .08s ease, box-shadow .2s ease, filter .2s ease, opacity .2s ease;
+}
+
+.link:hover { transform: translateY(-1px); box-shadow: 0 16px 36px rgba(0,0,0,.2); }
+.link:active { transform: translateY(0); }
+
+.link .left {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  display: inline-block;
+}
+
+.external-icon { opacity: .9; }
+
+.text { display: grid; gap: 4px; }
+.label { font-weight: 700; font-size: 18px; line-height: 1; }
+.handle { font-weight: 500; opacity: .95; }
+
+/* Brand styles */
+.link.ig {
+  background: linear-gradient(90deg, #ff5a7a, #b843ff, #5669ff);
+}
+
+.link.li {
+  background: linear-gradient(90deg, #0a66c2, #004182);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: #fff;
+  opacity: .9;
+  font-weight: 500;
+  margin-top: 26px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.15);
+}
+.footer .heart { color: #ff4d6d; }
+
+@media (max-width: 520px) {
+  .link { padding: 16px 14px; }
+  .label { font-size: 16px; }
+}
